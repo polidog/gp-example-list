@@ -73,12 +73,13 @@ generated/                # 生成されたリストコンテナ
 
 ## DEMRALプロセス
 
-本プロジェクトではDEMRALの8つの開発活動をClaude Codeのスキルとして実装している。
+本プロジェクトではDEMRALの9つの開発活動をClaude Codeのスキルとして実装している。
 
 | 活動 | スキル | 成果物 |
 |------|--------|--------|
 | ドメインスコーピング | `/domain-scoping` | `01-domain-scope.md` |
 | フィーチャーモデリング | `/feature-modeling` | `02〜04` |
+| ADT仕様定義 | `/adt-specification` | `03a-adt-specification.md` |
 | アーキテクチャ設計 | `/architecture-design` | `05〜06` |
 | DSL定義 | `/dsl-definition` | `07〜08` |
 | 構成の知識定義 | `/configuration-knowledge` | `09` |
