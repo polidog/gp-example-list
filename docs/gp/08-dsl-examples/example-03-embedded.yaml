@@ -1,0 +1,10 @@
+# 組み込み向け: 外���参照・単相リスト + shortカウンタ（C++）
+# メモリ効率を重視���た構成
+list:
+  element_type: T
+  ownership: ExternalReference
+  morphology: Monomorphic
+  length_counter:
+    enabled: true
+    counter_type: short
+  target_language: cpp

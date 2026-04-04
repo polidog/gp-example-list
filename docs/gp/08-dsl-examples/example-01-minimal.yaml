@@ -1,0 +1,7 @@
+# 最小構成: 値コピー・単相リスト（C++）
+# すべての選択フィーチャーを無効にした最もシンプルな構成
+list:
+  element_type: T
+  ownership: Copy
+  morphology: Monomorphic
+  target_language: cpp

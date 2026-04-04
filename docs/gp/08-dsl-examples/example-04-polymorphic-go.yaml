@@ -1,0 +1,10 @@
+# 多相リスト: 外部参照・多相・カウンタ付き（Go）
+# インターフェース型を活用した柔軟なコレクション
+list:
+  element_type: T
+  ownership: ExternalReference
+  morphology: Polymorphic
+  length_counter:
+    enabled: true
+    counter_type: int
+  target_language: go

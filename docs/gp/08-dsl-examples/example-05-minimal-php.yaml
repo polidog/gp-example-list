@@ -1,0 +1,6 @@
+# 最小構成: 値コピー・単相リスト（PHP）
+list:
+  element_type: T
+  ownership: Copy
+  morphology: Monomorphic
+  target_language: php
