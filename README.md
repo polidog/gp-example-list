@@ -51,7 +51,7 @@ go run ./cmd/dsl-validate/ my-list.yaml --resolve
 docs/gp/                  # DEMRALプロセスの成果物
 ├── 01-domain-scope.md        # ドメインスコープ
 ├── 02-feature-model.md       # フィーチャーモデル
-├── 03-concept-model.md       # 概念モデル
+├── 03a-adt-specification.md   # 抽象データ型仕様
 ├── 04-constraints.md         # フィーチャー間制約
 ├── 05-architecture.md        # アーキテクチャ設計
 ├── 06-components.md          # 実装コンポーネント定義
@@ -78,7 +78,7 @@ generated/                # 生成されたリストコンテナ
 | 活動 | スキル | 成果物 |
 |------|--------|--------|
 | ドメインスコーピング | `/domain-scoping` | `01-domain-scope.md` |
-| フィーチャーモデリング | `/feature-modeling` | `02〜04` |
+| フィーチャーモデリング | `/feature-modeling` | `02`, `04` |
 | ADT仕様定義 | `/adt-specification` | `03a-adt-specification.md` |
 | アーキテクチャ設計 | `/architecture-design` | `05〜06` |
 | DSL定義 | `/dsl-definition` | `07〜08` |

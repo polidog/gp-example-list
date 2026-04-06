@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### ドメイン分析
 - **ドメインスコーピング** (`/domain-scoping`) — システムの目的・利用者・範囲を明確にし、ドメインの境界を定義する。成果物: `docs/gp/01-domain-scope.md`
-- **フィーチャーモデリングと概念モデリング** (`/feature-modeling`) — 共通性・可変性分析を行い、フィーチャーツリーと概念モデルを構造化する。成果物: `docs/gp/02-feature-model.md`, `docs/gp/03-concept-model.md`, `docs/gp/04-constraints.md`
+- **フィーチャーモデリング** (`/feature-modeling`) — 重要概念の洗い出しと共通性・可変性分析を行い、フィーチャーツリーを構造化する。成果物: `docs/gp/02-feature-model.md`, `docs/gp/04-constraints.md`
 - **抽象データ型（ADT）の仕様定義** (`/adt-specification`) — 操作のシグネチャ・事前条件・事後条件・不変条件を形式的に定義し、フィーチャーによるパラメタライズを明確にする。成果物: `docs/gp/03a-adt-specification.md`
 
 ### ドメイン設計
@@ -42,7 +42,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `docs/gp/01-domain-scope.md` — ドメインスコープ（ドメインスコーピングの成果物）
 - `docs/gp/02-feature-model.md` — フィーチャーモデル（フィーチャーモデリングの成果物）
-- `docs/gp/03-concept-model.md` — 概念モデル（フィーチャーモデリングの成果物）
 - `docs/gp/03a-adt-specification.md` — 抽象データ型仕様（ADT仕様定義の成果物）
 - `docs/gp/04-constraints.md` — フィーチャー間の制約と影響関係
 - `docs/gp/05-architecture.md` — アーキテクチャ設計
