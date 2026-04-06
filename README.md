@@ -51,7 +51,6 @@ go run ./cmd/dsl-validate/ my-list.yaml --resolve
 docs/gp/                  # DEMRALプロセスの成果物
 ├── 01-domain-scope.md        # ドメインスコープ
 ├── 02-feature-model.md       # フィーチャーモデル
-├── 03a-adt-specification.md   # 抽象データ型仕様
 ├── 04-constraints.md         # フィーチャー間制約
 ├── 05-architecture.md        # アーキテクチャ設計
 ├── 06-components.md          # 実装コンポーネント定義
@@ -73,19 +72,19 @@ generated/                # 生成されたリストコンテナ
 
 ## DEMRALプロセス
 
-本プロジェクトではDEMRALの9つの開発活動をClaude Codeのスキルとして実装している。
+本プロジェクトではDEMRALの開発活動をClaude Codeのスキルとして実装している。
 
 | 活動 | スキル | 成果物 |
 |------|--------|--------|
 | ドメインスコーピング | `/domain-scoping` | `01-domain-scope.md` |
 | フィーチャーモデリング | `/feature-modeling` | `02`, `04` |
-| ADT仕様定義 | `/adt-specification` | `03a-adt-specification.md` |
 | アーキテクチャ設計 | `/architecture-design` | `05〜06` |
 | DSL定義 | `/dsl-definition` | `07〜08` |
 | 構成の知識定義 | `/configuration-knowledge` | `09` |
 | DSL実装 | `/dsl-implementation` | `pkg/dsl/` |
 | コンポーネント実装 | `/component-implementation` | `generated/` |
 | ジェネレータ実装 | `/generator-implementation` | 構成の知識 + AI |
+| テスト生成 | `/test-generation` | プロパティベーステスト |
 
 これらは厳密な順序ではなく、任意の順番で何度でも繰り返せる。
 

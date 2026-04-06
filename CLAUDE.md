@@ -15,7 +15,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### ドメイン分析
 - **ドメインスコーピング** (`/domain-scoping`) — システムの目的・利用者・範囲を明確にし、ドメインの境界を定義する。成果物: `docs/gp/01-domain-scope.md`
 - **フィーチャーモデリング** (`/feature-modeling`) — 重要概念の洗い出しと共通性・可変性分析を行い、フィーチャーツリーを構造化する。成果物: `docs/gp/02-feature-model.md`, `docs/gp/04-constraints.md`
-- **抽象データ型（ADT）の仕様定義** (`/adt-specification`) — 操作のシグネチャ・事前条件・事後条件・不変条件を形式的に定義し、フィーチャーによるパラメタライズを明確にする。成果物: `docs/gp/03a-adt-specification.md`
 
 ### ドメイン設計
 - **共通アーキテクチャの設計と実装コンポーネントの確定** (`/architecture-design`) — 可変ポイントの実現方式を設計し、実装コンポーネントを確定する。成果物: `docs/gp/05-architecture.md`, `docs/gp/06-components.md`
@@ -26,6 +25,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **実装コンポーネントの実装** (`/component-implementation`) — 共通・可変コンポーネントをコードとして実装する。
 - **ドメイン固有記法の実装** (`/dsl-implementation`) — DSLのバリデーションと構成解決の仕組みを実装する。
 - **ジェネレータによる構成の知識の実装** (`/generator-implementation`) — 仕様書からコードを生成・変更する仕組みを実装する。
+- **テスト生成** (`/test-generation`) — ADTの代数的性質をプロパティベーステストとして生成し、生成コードの正しさを検証する。
 
 ### 運用サイクル
 活動が一通り完了した後は「仕様書を書いてシステムを発注 → フィーチャー変更を反映して進化」のサイクルで開発を進める。このサイクルの中でも、必要に応じて上記の活動に戻り成果物を更新する。
@@ -42,7 +42,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `docs/gp/01-domain-scope.md` — ドメインスコープ（ドメインスコーピングの成果物）
 - `docs/gp/02-feature-model.md` — フィーチャーモデル（フィーチャーモデリングの成果物）
-- `docs/gp/03a-adt-specification.md` — 抽象データ型仕様（ADT仕様定義の成果物）
 - `docs/gp/04-constraints.md` — フィーチャー間の制約と影響関係
 - `docs/gp/05-architecture.md` — アーキテクチャ設計
 - `docs/gp/06-components.md` — 実装コンポーネント一覧
