@@ -78,13 +78,10 @@ generated/                # 生成されたリストコンテナ
 |------|--------|--------|
 | ドメインスコーピング | `/domain-scoping` | `01-domain-scope.md` |
 | フィーチャーモデリング | `/feature-modeling` | `02`, `04` |
-| アーキテクチャ設計 | `/architecture-design` | `05〜06` |
+| ドメイン設計 | `/domain-design` | `05`, `06`, `09` |
 | DSL定義 | `/dsl-definition` | `07〜08` |
-| 構成の知識定義 | `/configuration-knowledge` | `09` |
-| DSL実装 | `/dsl-implementation` | `pkg/dsl/` |
-| コンポーネント実装 | `/component-implementation` | `generated/` |
-| ジェネレータ実装 | `/generator-implementation` | 構成の知識 + AI |
-| テスト生成 | `/test-generation` | プロパティベーステスト |
+| 実装 | `/implement` | `generated/`, `pkg/dsl/` |
+| テスト | `/test` | テストコード |
 
 これらは厳密な順序ではなく、任意の順番で何度でも繰り返せる。
 

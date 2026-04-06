@@ -8,24 +8,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## ジェネレーティブプログラミングのプロセス（DEMRAL準拠）
 
-本プロジェクトはDEMRAL（Domain Engineering Method for Reusable Algorithmic Libraries）のプロセスに準拠する。以下の9つの開発活動はClaude Codeのスキル（スラッシュコマンド）として実装されている。
+本プロジェクトはDEMRAL（Domain Engineering Method for Reusable Algorithmic Libraries）のプロセスに準拠する。以下の6つの活動はClaude Codeのスキル（スラッシュコマンド）として実装されている。
 
-**重要: これらは厳密な順序のフェーズではなく、任意の順番でスケジュールし、何度でも繰り返してよい活動である。** 例えば、概念の洗い出しは何度となく繰り返されるし、ドメイン設計の途中でドメインスコープに戻ることもある。各活動の成果物は必要に応じて更新する。
+**重要: これらは厳密な順序のフェーズではなく、任意の順番でスケジュールし、何度でも繰り返してよい活動である。**
 
 ### ドメイン分析
 - **ドメインスコーピング** (`/domain-scoping`) — システムの目的・利用者・範囲を明確にし、ドメインの境界を定義する。成果物: `docs/gp/01-domain-scope.md`
 - **フィーチャーモデリング** (`/feature-modeling`) — 重要概念の洗い出しと共通性・可変性分析を行い、フィーチャーツリーを構造化する。成果物: `docs/gp/02-feature-model.md`, `docs/gp/04-constraints.md`
 
 ### ドメイン設計
-- **共通アーキテクチャの設計と実装コンポーネントの確定** (`/architecture-design`) — 可変ポイントの実現方式を設計し、実装コンポーネントを確定する。成果物: `docs/gp/05-architecture.md`, `docs/gp/06-components.md`
+- **ドメイン設計** (`/domain-design`) — アーキテクチャ設計と構成の知識（フィーチャー選択→実装マッピング）を定義する。成果物: `docs/gp/05-architecture.md`, `docs/gp/06-components.md`, `docs/gp/09-configuration-knowledge.md`
 - **ドメイン固有記法の定義** (`/dsl-definition`) — システムを「発注」するための宣言的な記法を定義する。成果物: `docs/gp/07-dsl-notation.md`, `docs/gp/08-dsl-examples/`
-- **構成の知識の定義** (`/configuration-knowledge`) — フィーチャー選択から実装へのマッピングルールを定義する。成果物: `docs/gp/09-configuration-knowledge.md`
 
 ### ドメイン実装
-- **実装コンポーネントの実装** (`/component-implementation`) — 共通・可変コンポーネントをコードとして実装する。
-- **ドメイン固有記法の実装** (`/dsl-implementation`) — DSLのバリデーションと構成解決の仕組みを実装する。
-- **ジェネレータによる構成の知識の実装** (`/generator-implementation`) — 仕様書からコードを生成・変更する仕組みを実装する。
-- **テスト生成** (`/test-generation`) — ADTの代数的性質をプロパティベーステストとして生成し、生成コードの正しさを検証する。
+- **実装** (`/implement`) — DSL仕様書と構成の知識に基づきコードを生成する。DSLバリデータの実装もここで行う。
+- **テスト** (`/test`) — 生成コードの正しさをプロパティベーステストで検証する。
 
 ### 運用サイクル
 活動が一通り完了した後は「仕様書を書いてシステムを発注 → フィーチャー変更を反映して進化」のサイクルで開発を進める。このサイクルの中でも、必要に応じて上記の活動に戻り成果物を更新する。
@@ -40,11 +37,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 すべての成果物は `docs/gp/` に番号付きで配置する。
 
-- `docs/gp/01-domain-scope.md` — ドメインスコープ（ドメインスコーピングの成果物）
-- `docs/gp/02-feature-model.md` — フィーチャーモデル（フィーチャーモデリングの成果物）
+- `docs/gp/01-domain-scope.md` — ドメインスコープ
+- `docs/gp/02-feature-model.md` — フィーチャーモデル
 - `docs/gp/04-constraints.md` — フィーチャー間の制約と影響関係
 - `docs/gp/05-architecture.md` — アーキテクチャ設計
 - `docs/gp/06-components.md` — 実装コンポーネント一覧
 - `docs/gp/07-dsl-notation.md` — ドメイン固有記法の定義
 - `docs/gp/08-dsl-examples/` — DSLのサンプル仕様書
-- `docs/gp/09-configuration-knowledge.md` — 構成の知識
+- `docs/gp/09-configuration-knowledge.md` — 構成の知識（生成ルール + テスト性質）

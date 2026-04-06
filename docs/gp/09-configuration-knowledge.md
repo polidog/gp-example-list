@@ -240,3 +240,29 @@ DSL仕様書からコード生成を行う際の処理手順:
    → 型マッピング、構文変換、イディオム適用
 9. コード生成（ルール R1〜R6 に従い各コンポーネントを合成）
 ```
+
+## テスト性質
+
+生成コードが満たすべき性質。`/test` スキルでテストコードとして生成される。
+
+### 共通性質（すべての構成で成立）
+
+| # | 性質 | 検証内容 |
+|---|------|---------|
+| P1 | `length(new()) = 0` | 新規リストの要素数は0 |
+| P2 | `isEmpty(new()) = true` | 新規リストは空 |
+| P3 | `length(insert(l, e)) = length(l) + 1` | 挿入は要素数を1増やす |
+| P4 | `isEmpty(insert(l, e)) = false` | 挿入後は空ではない |
+| P5 | `find(insert(l, e), e) ≠ null` | 挿入した要素は検索で見つかる |
+| P6 | `¬isEmpty(l) ⟹ length(remove(l)) = length(l) - 1` | 非空リストからの削除は要素数を1減らす |
+| P7 | `isEmpty(l) ⟹ remove(l) returns false` | 空リストからの削除は失敗する |
+
+### 構成固有の性質
+
+| # | 条件 | 性質 | 検証内容 |
+|---|------|------|---------|
+| PC1 | Ownership = Copy | 挿入後に元の値を変更しても、リスト内の値は変化しない | コピーの独立性 |
+| PE1 | Ownership = ExternalReference | 挿入後に元の値を変更すると、リスト経由でも変更が観測される | 参照の共有性 |
+| PO1 | Ownership = OwnedReference | destroy後、全要素が解放される | 所有権による解放責任 |
+| PL1 | LengthCounter = 有効 | 複数回のinsert/removeの後もlength()は正確 | カウンタ整合性 |
+| PT1 | Tracing = 有効 | insert/remove/find/destroyの各操作がトレースログに記録される | トレース網羅性 |
