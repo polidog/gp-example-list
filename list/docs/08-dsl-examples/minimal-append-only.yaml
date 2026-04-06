@@ -1,0 +1,14 @@
+# 最小構成（追加専用リスト）
+# 操作を最小限にした構成。追加と取得のみ（基本操作のみ）。
+
+name: AppendOnlyList
+language: go
+element_type: float64
+
+storage:
+  type: array
+  initial_capacity: 8
+  growth_strategy: additive
+  growth_increment: 8
+
+operations: []

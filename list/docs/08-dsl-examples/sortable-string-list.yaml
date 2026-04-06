@@ -1,0 +1,21 @@
+# ソート可能な文字列リスト
+# 文字列を格納し、マージソートによるソートとイテレーションを備える。
+
+name: StringList
+language: python
+element_type: str
+
+storage:
+  type: array
+  initial_capacity: 32
+  growth_strategy: doubling
+
+operations:
+  - remove
+  - insert
+  - linear_search
+  - contains
+  - sort:
+      algorithm: merge_sort
+  - iteration:
+      direction: forward

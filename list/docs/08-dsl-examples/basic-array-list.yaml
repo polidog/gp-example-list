@@ -1,0 +1,19 @@
+# 基本的な配列ベースリスト（デフォルト構成）
+# 最もシンプルな構成。int型の配列ベースリストに標準的な操作を備える。
+
+name: IntList
+language: php
+element_type: int
+
+storage:
+  type: array
+  initial_capacity: 16
+  growth_strategy: doubling
+
+operations:
+  - remove
+  - insert
+  - linear_search
+  - contains
+  - iteration:
+      direction: forward

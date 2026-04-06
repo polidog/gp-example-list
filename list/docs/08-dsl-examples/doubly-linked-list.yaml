@@ -1,0 +1,18 @@
+# 双方向連結リスト
+# 双方向連結リストによる実装。逆方向イテレーションを備える。
+
+name: DoublyLinkedList
+language: typescript
+element_type: number
+
+storage:
+  type: linked_list
+  direction: doubly
+
+operations:
+  - remove
+  - insert
+  - linear_search
+  - contains
+  - iteration:
+      direction: reverse
